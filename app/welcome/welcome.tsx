@@ -1,1162 +1,283 @@
-import React, {useState} from "react";
-import { useNavigate } from "react-router";
-import { NavBar } from "./navBar.tsx";
-export const Welcome = (props) => {
+// Part 1: Hero + "What We Offer" Section (Tailwind Responsive)
 
-  const navigate = useNavigate();
+import React, { useState } from "react";
+import { NavBar } from "./navBar";
+import Bac from '../mnt/data/bac.png'
 
-  const goToHome = () => {
-    navigate("/");
-  };
+export const Welcome = () => {// Part 1–3: Hero + "What We Offer" + Acquisition Criteria + Our Process Section (Tailwind Responsive)
+	const [input1, setInput1] = useState("");
+	const [input2, setInput2] = useState("");
+	const [input3, setInput3] = useState("");
+	const [input4, setInput4] = useState("");
+	
+	
 
-  const goToAbout = () => {
-    navigate("/about");
-  };
+	  return (
+		<div className="flex flex-col bg-white">
+		  <div className="flex flex-col w-full">
+			<NavBar />
+			<div
+        className="w-full bg-cover bg-center relative"
+        style={{ backgroundImage: `url(${Bac})`,height:'500px' }}
 
-  const goToservices
-  = () => {
-    navigate("/services");
-  };
+      >
+    <div className="absolute inset-0 bg-black/40" />
+	<div className="relative w-fit clip-polygon bg-white shadow-xl px-6 py-4 sm:px-10 sm:py-6 text-center mx-auto">
+  <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#14161E] relative inline-block mx-auto">
+    Brewery Acquisition Corp.
+    <div className="h-[2px] bg-[#14161E] w-full mt-2 mx-auto" />
+  </h1>
+  <p className="text-sm sm:text-base text-[#14161E] mt-3">
+    Strategic Capital for Ontario’s Craft Brewing Future
+  </p>
+</div>
 
-  const goTocontact = () => {
-    navigate("/contact");
-  };
 
-  
+      </div>
 
-  
-
-
-	const [input1, onChangeInput1] = useState('');
-	const [input2, onChangeInput2] = useState('');
-	const [input3, onChangeInput3] = useState('');
-	const [input4, onChangeInput4] = useState('');
-	return (
-		<div 
-			style={{
-				display: "flex",
-				flexDirection: "column",
-				background: "#FFFFFF",
-			}}>
-			<div  style={{
-					height: 4338,
-					alignSelf: "stretch",
-					display: "flex",
-					flexDirection: "column",
-					background: "#FFFFFF",
-				}}>
-		<NavBar />
-				<img
-					src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/2wzsq18e_expires_30_days.png"} 
-					style={{
-						height: 646,
-						alignSelf: "stretch",
-						objectFit: "fill",
-					}}
-				/>
-				<div 
-					style={{
-						alignSelf: "stretch",
-						display: "flex",
-						flexDirection: "column",
-						alignItems: "flex-start",
-						background: "#FFFFFF",
-						paddingTop: 77,
-						marginBottom: 93,
-					}}>
-					<div 
-						style={{
-							alignSelf: "stretch",
-							display: "flex",
-							flexDirection: "column",
-							alignItems: "center",
-							marginBottom: 65,
-						}}>
-						<span 
-							style={{
-								color: "#2947A9",
-								fontSize: 60,
-								fontWeight: "bold",
-							}} >
-							{"What We Offer"}
-						</span>
-					</div>
-					<div 
-						style={{
-							display: "flex",
-							alignItems: "center",
-							marginLeft: 216,
-						}}>
-						<button 
-							style={{
-								flexShrink: 0,
-								display: "flex",
-								flexDirection: "column",
-								alignItems: "flex-start",
-								background: "#FFFFFF",
-								borderRadius: 4,
-								border: `1px solid #E0E2EA`,
-								paddingTop: 20,
-								paddingBottom: 20,
-								marginRight: 66,
-								gap: 18,
-								textAlign: "left",
-							}}
-							onClick={()=>alert("Pressed!")}>
-							<img
-								src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/33itn8t9_expires_30_days.png"} 
-								style={{
-									borderRadius: 4,
-									width: 40,
-									height: 40,
-									marginLeft: 20,
-									objectFit: "fill",
-								}}
-							/>
-							<span 
-								style={{
-									color: "#3D445B",
-									fontSize: 20,
-									fontWeight: "bold",
-									marginLeft: 20,
-								}} >
-								{"Strategic Capital"}
-							</span>
-							<span 
-								style={{
-									color: "#848EAD",
-									fontSize: 16,
-									marginLeft: 20,
-									width: 233,
-								}} >
-								{"Immediate funding to support brewery expansion, new product lines, or operational upgrades."}
-							</span>
-						</button>
-						<div 
-							style={{
-								flexShrink: 0,
-								display: "flex",
-								flexDirection: "column",
-								alignItems: "flex-start",
-								background: "#FFFFFF",
-								borderRadius: 4,
-								border: `1px solid #E0E2EA`,
-								paddingTop: 20,
-								paddingBottom: 40,
-								marginRight: 78,
-								gap: 18,
-							}}>
-							<img
-								src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/yc6ppbvc_expires_30_days.png"} 
-								style={{
-									borderRadius: 4,
-									width: 40,
-									height: 40,
-									marginLeft: 20,
-									objectFit: "fill",
-								}}
-							/>
-							<span 
-								style={{
-									color: "#3D445B",
-									fontSize: 20,
-									fontWeight: "bold",
-									marginLeft: 20,
-								}} >
-								{"Operational Support"}
-							</span>
-							<span 
-								style={{
-									color: "#848EAD",
-									fontSize: 16,
-									marginLeft: 20,
-									marginRight: 20,
-									width: 246,
-								}} >
-								{"Guidance from a team with a proven track record in beverage and retail"}
-							</span>
-						</div>
-						<div 
-							style={{
-								flexShrink: 0,
-								display: "flex",
-								flexDirection: "column",
-								alignItems: "flex-start",
-								background: "#FFFFFF",
-								borderRadius: 4,
-								border: `1px solid #E0E2EA`,
-								paddingTop: 20,
-								paddingBottom: 40,
-								gap: 18,
-							}}>
-							<img
-								src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/mic8wm59_expires_30_days.png"} 
-								style={{
-									borderRadius: 4,
-									width: 40,
-									height: 40,
-									marginLeft: 20,
-									objectFit: "fill",
-								}}
-							/>
-							<span 
-								style={{
-									color: "#3D445B",
-									fontSize: 20,
-									fontWeight: "bold",
-									marginLeft: 20,
-								}} >
-								{"Distribution Enablement"}
-							</span>
-							<span 
-								style={{
-									color: "#848EAD",
-									fontSize: 16,
-									marginLeft: 20,
-									width: 223,
-								}} >
-								{"Access to established wholesale and retail distribution networks across"}
-							</span>
-						</div>
-					</div>
+	
+			{/* What We Offer Section */}
+			<section className="w-full flex flex-col items-center bg-white pt-20 pb-24 px-4">
+			  <h2 className="text-blue-800 text-[40px] sm:text-[60px] font-bold text-center mb-16">
+				What We Offer
+			  </h2>
+			  <div className="flex flex-col md:flex-row gap-8 md:gap-16 justify-center">
+				{/* Card 1 */}
+				<button
+				  onClick={() => alert("Pressed!")}
+				  className="flex flex-col bg-white border border-gray-300 rounded-md p-6 w-full md:w-72 shadow hover:shadow-lg transition"
+				>
+				  <img
+					src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/33itn8t9_expires_30_days.png"
+					className="w-10 h-10 mb-4 ml-2"
+					alt="Strategic Capital"
+				  />
+				  <h3 className="text-gray-800 text-lg font-bold mb-2 ml-2">Strategic Capital</h3>
+				  <p className="text-gray-500 text-sm ml-2 w-[233px]">
+					Immediate funding to support brewery expansion, new product lines, or operational upgrades.
+				  </p>
+				</button>
+	
+				{/* Card 2 */}
+				<div className="flex flex-col bg-white border border-gray-300 rounded-md p-6 w-full md:w-72 shadow">
+				  <img
+					src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/yc6ppbvc_expires_30_days.png"
+					className="w-10 h-10 mb-4 ml-2"
+					alt="Operational Support"
+				  />
+				  <h3 className="text-gray-800 text-lg font-bold mb-2 ml-2">Operational Support</h3>
+				  <p className="text-gray-500 text-sm ml-2 w-[246px]">
+					Guidance from a team with a proven track record in beverage and retail.
+				  </p>
 				</div>
-				<div 
-					style={{
-						alignSelf: "stretch",
-						display: "flex",
-						flexDirection: "column",
-						alignItems: "flex-start",
-						background: "#EFEFEF",
-						paddingTop: 53,
-						paddingBottom: 126,
-					}}>
-					<span 
-						style={{
-							color: "#2947A9",
-							fontSize: 60,
-							fontWeight: "bold",
-							marginBottom: 24,
-							marginLeft: 112,
-							width: 328,
-						}} >
-						{"Acquisition\nCriteria"}
-					</span>
-					<span 
-						style={{
-							color: "#282D3D",
-							fontSize: 24,
-							marginBottom: 97,
-							marginLeft: 112,
-						}} >
-						{"We’re currently seeking Ontario-based craft breweries that meet the following profile:"}
-					</span>
-					<div 
-						style={{
-							alignSelf: "stretch",
-							display: "flex",
-							alignItems: "center",
-							marginLeft: 248,
-							marginRight: 248,
-							gap: 24,
-						}}>
-						<div 
-							style={{
-								flexShrink: 0,
-								display: "flex",
-								flexDirection: "column",
-								alignItems: "center",
-							}}>
-							<img
-								src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/evoecjwa_expires_30_days.png"} 
-								style={{
-									width: 15,
-									height: 15,
-									marginBottom: 41,
-									objectFit: "fill",
-								}}
-							/>
-							<img
-								src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/rcpuhrlz_expires_30_days.png"} 
-								style={{
-									width: 15,
-									height: 15,
-									marginBottom: 42,
-									objectFit: "fill",
-								}}
-							/>
-							<img
-								src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/d31v7cj6_expires_30_days.png"} 
-								style={{
-									width: 15,
-									height: 15,
-									objectFit: "fill",
-								}}
-							/>
-						</div>
-						<span 
-							style={{
-								color: "#282D3D",
-								fontSize: 24,
-								width: 902,
-							}} >
-							{"Production capacity under 400,000 hectolitres/year  Fully operational and brewing-ready facilities  Ambition to grow with the support of strategic capital and industry expertise"}
-						</span>
-					</div>
+	
+				{/* Card 3 */}
+				<div className="flex flex-col bg-white border border-gray-300 rounded-md p-6 w-full md:w-72 shadow">
+				  <img
+					src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/mic8wm59_expires_30_days.png"
+					className="w-10 h-10 mb-4 ml-2"
+					alt="Distribution Enablement"
+				  />
+				  <h3 className="text-gray-800 text-lg font-bold mb-2 ml-2">Distribution Enablement</h3>
+				  <p className="text-gray-500 text-sm ml-2 w-[223px]">
+					Access to established wholesale and retail distribution networks across regions.
+				  </p>
 				</div>
-				<div 
-					style={{
-						alignSelf: "stretch",
-						display: "flex",
-						alignItems: "flex-start",
-						background: "#FFFFFF",
-						paddingTop: 31,
-						paddingBottom: 144,
-						paddingLeft: 95,
-						paddingRight: 95,
-					}}>
-					<div 
-						style={{
-							flexShrink: 0,
-							display: "flex",
-							flexDirection: "column",
-							alignItems: "flex-start",
-							marginRight: 49,
-						}}>
-						<div 
-							style={{
-								display: "flex",
-								flexDirection: "column",
-								alignItems: "flex-start",
-								marginBottom: 59,
-							}}>
-							<div 
-								style={{
-									alignSelf: "stretch",
-									display: "flex",
-									flexDirection: "column",
-									alignItems: "flex-end",
-								}}>
-								<img
-									src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/g8djp9cf_expires_30_days.png"} 
-									style={{
-										width: 84,
-										height: 84,
-										objectFit: "fill",
-									}}
-								/>
-							</div>
-							<div 
-								style={{
-									display: "flex",
-									flexDirection: "column",
-									alignItems: "flex-start",
-									background: "#FFFFFF",
-									borderRadius: 4,
-									border: `1px solid #FFFFFF`,
-									paddingTop: 30,
-									paddingBottom: 30,
-									gap: 2,
-									boxShadow: "0px 4px 6px #1118270D",
-								}}>
-								<span 
-									style={{
-										color: "#282D3D",
-										fontSize: 72,
-										fontWeight: "bold",
-										marginLeft: 30,
-									}} >
-									{"01"}
-								</span>
-								<div 
-									style={{
-										display: "flex",
-										alignItems: "flex-start",
-										marginLeft: 46,
-										marginRight: 46,
-										gap: 12,
-									}}>
-									<div 
-										style={{
-											width: 7,
-											height: 28,
-											background: "#F9995D",
-										}}>
-									</div>
-									<span 
-										style={{
-											color: "#657199",
-											fontSize: 24,
-										}} >
-										{"Initial Inquiry"}
-									</span>
-								</div>
-							</div>
-						</div>
-						<div 
-							style={{
-								alignSelf: "stretch",
-								display: "flex",
-								flexDirection: "column",
-								alignItems: "flex-end",
-								marginBottom: 2,
-							}}>
-							<div 
-								style={{
-									display: "flex",
-									flexDirection: "column",
-									alignItems: "flex-start",
-									position: "relative",
-								}}>
-								<img
-									src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/777h6rjo_expires_30_days.png"} 
-									style={{
-										width: 168,
-										height: 168,
-										objectFit: "fill",
-									}}
-								/>
-								<img
-									src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/r88nwg34_expires_30_days.png"} 
-									style={{
-										position: "absolute",
-										bottom: -75,
-										right: -44,
-										width: 93,
-										height: 93,
-										objectFit: "fill",
-									}}
-								/>
-							</div>
-						</div>
-						<div 
-							style={{
-								display: "flex",
-								flexDirection: "column",
-								alignItems: "flex-start",
-								background: "#FFFFFF",
-								borderRadius: 4,
-								border: `1px solid #FFFFFF`,
-								paddingTop: 30,
-								paddingBottom: 30,
-								marginLeft: 66,
-								gap: 2,
-								boxShadow: "0px 4px 6px #1118270D",
-							}}>
-							<span 
-								style={{
-									color: "#282D3D",
-									fontSize: 72,
-									fontWeight: "bold",
-									marginLeft: 30,
-								}} >
-								{"03"}
-							</span>
-							<div 
-								style={{
-									display: "flex",
-									alignItems: "flex-start",
-									marginLeft: 46,
-									gap: 12,
-								}}>
-								<div 
-									style={{
-										width: 7,
-										height: 56,
-										background: "#F9995D",
-									}}>
-								</div>
-								<span 
-									style={{
-										color: "#657199",
-										fontSize: 24,
-										width: 180,
-									}} >
-									{"Due Diligence & Negotiations"}
-								</span>
-							</div>
-						</div>
-					</div>
-					<div 
-						style={{
-							flex: 1,
-							display: "flex",
-							flexDirection: "column",
-							marginTop: 42,
-							marginRight: 12,
-							gap: 61,
-						}}>
-						<div 
-							style={{
-								alignSelf: "stretch",
-								display: "flex",
-								flexDirection: "column",
-								alignItems: "flex-start",
-								marginLeft: 11,
-								marginRight: 11,
-							}}>
-							<div 
-								style={{
-									display: "flex",
-									flexDirection: "column",
-									alignItems: "flex-start",
-									marginLeft: 19,
-									position: "relative",
-								}}>
-								<img
-									src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/l5bo0mmf_expires_30_days.png"} 
-									style={{
-										width: 177,
-										height: 177,
-										objectFit: "fill",
-									}}
-								/>
-								<img
-									src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/dcjkbiwp_expires_30_days.png"} 
-									style={{
-										position: "absolute",
-										bottom: -24,
-										left: -52,
-										width: 79,
-										height: 79,
-										objectFit: "fill",
-									}}
-								/>
-							</div>
-							<div 
-								style={{
-									alignSelf: "stretch",
-									display: "flex",
-									flexDirection: "column",
-									alignItems: "flex-start",
-									background: "#FFFFFF",
-									borderRadius: 4,
-									border: `1px solid #FFFFFF`,
-									paddingTop: 30,
-									paddingBottom: 30,
-									gap: 2,
-									boxShadow: "0px 4px 6px #1118270D",
-								}}>
-								<span 
-									style={{
-										color: "#282D3D",
-										fontSize: 72,
-										fontWeight: "bold",
-										marginLeft: 30,
-									}} >
-									{"02"}
-								</span>
-								<div 
-									style={{
-										display: "flex",
-										alignItems: "flex-start",
-										paddingLeft: 16,
-										paddingRight: 16,
-										marginLeft: 30,
-										gap: 12,
-									}}>
-									<div 
-										style={{
-											width: 7,
-											height: 56,
-											background: "#F9995D",
-										}}>
-									</div>
-									<span 
-										style={{
-											color: "#657199",
-											fontSize: 24,
-											width: 186,
-										}} >
-										{"Evaluation & LOI Issuance"}
-									</span>
-								</div>
-							</div>
-						</div>
-						<div 
-							style={{
-								alignSelf: "stretch",
-								display: "flex",
-								flexDirection: "column",
-								alignItems: "flex-start",
-							}}>
-							<img
-								src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/sf9sslpd_expires_30_days.png"} 
-								style={{
-									width: 177,
-									height: 177,
-									marginLeft: 30,
-									objectFit: "fill",
-								}}
-							/>
-							<div 
-								style={{
-									alignSelf: "stretch",
-									display: "flex",
-									flexDirection: "column",
-									alignItems: "flex-end",
-								}}>
-								<img
-									src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/xto02uih_expires_30_days.png"} 
-									style={{
-										width: 97,
-										height: 97,
-										objectFit: "fill",
-									}}
-								/>
-							</div>
-							<div 
-								style={{
-									alignSelf: "stretch",
-									display: "flex",
-									flexDirection: "column",
-									alignItems: "flex-start",
-									background: "#FFFFFF",
-									borderRadius: 4,
-									border: `1px solid #FFFFFF`,
-									paddingTop: 30,
-									paddingBottom: 30,
-									gap: 2,
-									boxShadow: "0px 4px 6px #1118270D",
-								}}>
-								<span 
-									style={{
-										color: "#282D3D",
-										fontSize: 72,
-										fontWeight: "bold",
-										marginLeft: 30,
-									}} >
-									{"04"}
-								</span>
-								<div 
-									style={{
-										alignSelf: "stretch",
-										display: "flex",
-										alignItems: "flex-start",
-										paddingLeft: 16,
-										paddingRight: 16,
-										marginLeft: 30,
-										marginRight: 30,
-										gap: 12,
-									}}>
-									<div 
-										style={{
-											width: 7,
-											height: 56,
-											background: "#F9995D",
-										}}>
-									</div>
-									<span 
-										style={{
-											color: "#657199",
-											fontSize: 24,
-											flex: 1,
-										}} >
-										{"Final Agreement & Funding"}
-									</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div 
-						style={{
-							flexShrink: 0,
-							display: "flex",
-							flexDirection: "column",
-							alignItems: "flex-start",
-							marginTop: 141,
-						}}>
-						<span 
-							style={{
-								color: "#2947A9",
-								fontSize: 60,
-								fontWeight: "bold",
-								marginBottom: 40,
-								width: 229,
-							}} >
-							{"Our \nProcess"}
-						</span>
-						<span 
-							style={{
-								color: "#000000",
-								fontSize: 20,
-								marginBottom: 51,
-								width: 379,
-							}} >
-							{"Our streamlined acquisition process allows us to move quickly—from initial interest to funding in as little as 30 to 90 days post-LOI."}
-						</span>
-						<button 
-							style={{
-								display: "flex",
-								flexDirection: "column",
-								alignItems: "flex-start",
-								background: "#2947A9",
-								borderRadius: 2,
-								border: "none",
-								paddingTop: 16,
-								paddingBottom: 16,
-								paddingLeft: 39,
-								paddingRight: 39,
-								textAlign: "left",
-							}}
-							onClick={()=>alert("Pressed!")}>
-							<span 
-								style={{
-									color: "#FFFFFF",
-									fontSize: 18,
-									fontWeight: "bold",
-								}} >
-								{"Contact Us"}
-							</span>
-						</button>
-					</div>
+			  </div>
+			</section>
+	
+			{/* Acquisition Criteria Section */}
+			<section className="bg-[#efefef] flex flex-col items-start px-6 sm:px-16 pt-16 pb-32">
+			  <h2 className="text-[#2947A9] text-[40px] sm:text-[60px] font-bold mb-6">
+				Acquisition Criteria
+			  </h2>
+			  <p className="text-[#282D3D] text-xl mb-16">
+				We’re currently seeking Ontario-based craft breweries that meet the following profile:
+			  </p>
+			  <div className="flex flex-col sm:flex-row gap-6 items-start">
+				<div className="flex flex-col items-center gap-10">
+				  <img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/evoecjwa_expires_30_days.png" alt="dot" className="w-4 h-4" />
+				  <img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/rcpuhrlz_expires_30_days.png" alt="dot" className="w-4 h-4" />
+				  <img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/d31v7cj6_expires_30_days.png" alt="dot" className="w-4 h-4" />
 				</div>
-				<div 
-					style={{
-						alignSelf: "stretch",
-						display: "flex",
-						alignItems: "center",
-						paddingTop: 100,
-						paddingBottom: 100,
-						paddingLeft: 112,
-						paddingRight: 112,
-						gap: 12,
-						backgroundImage: 'url(https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/ssh03lb6_expires_30_days.png)',
-						backgroundSize: "cover",
-						backgroundPosition: "center",
-					}}>
-					<div 
-						style={{
-							flex: 1,
-							display: "flex",
-							flexDirection: "column",
-							alignItems: "flex-start",
-							gap: 30,
-						}}>
-						<span 
-							style={{
-								color: "#FFFFFF",
-								fontSize: 36,
-								fontWeight: "bold",
-							}} >
-							{"Free consultation with exceptional quality"}
-						</span>
-						<span 
-							style={{
-								color: "#FFFFFF",
-								fontSize: 24,
-							}} >
-							{"Just one email away: partner@bacorp.ca"}
-						</span>
-					</div>
-					<button 
-						style={{
-							flexShrink: 0,
-							display: "flex",
-							flexDirection: "column",
-							alignItems: "flex-start",
-							background: "none",
-							borderRadius: 2,
-							border: `2px solid #FFFFFF`,
-							paddingTop: 16,
-							paddingBottom: 16,
-							paddingLeft: 20,
-							paddingRight: 20,
-							textAlign: "left",
-						}}
-						onClick={()=>alert("Pressed!")}>
-						<span 
-							style={{
-								color: "#FFFFFF",
-								fontSize: 18,
-								fontWeight: "bold",
-							}} >
-							{"Get your consultation"}
-						</span>
-					</button>
-				</div>
-				<div 
-					style={{
-						alignSelf: "stretch",
-						display: "flex",
-						flexDirection: "column",
-						alignItems: "flex-start",
-						background: "#F6F8F7",
-						paddingTop: 60,
-						paddingBottom: 60,
-					}}>
-					<span 
-						style={{
-							color: "#282D3D",
-							fontSize: 36,
-							fontWeight: "bold",
-							marginBottom: 20,
-							marginLeft: 347,
-							marginRight: 347,
-						}} >
-						{"Interested in partnering or learning more?"}
-					</span>
-					<span 
-						style={{
-							color: "#282D3D",
-							fontSize: 20,
-							textAlign: "center",
-							marginBottom: 38,
-							marginLeft: 451,
-							marginRight: 451,
-						}} >
-						{"Please fill out the form below or contact us directly at partner@bacorp.ca"}
-					</span>
-					<div 
-						style={{
-							alignSelf: "stretch",
-							display: "flex",
-							alignItems: "flex-start",
-							marginBottom: 20,
-							marginLeft: 424,
-							marginRight: 424,
-							gap: 32,
-						}}>
-						<input
-							placeholder={"Your Name*"}
-							value={input1}
-							onChange={(event)=>onChangeInput1(event.target.value)}
-							style={{
-								color: "#A3AAC1",
-								fontSize: 18,
-								flex: 1,
-								alignSelf: "stretch",
-								background: "#FFFFFF",
-								borderRadius: 4,
-								border: `1px solid #E0E2EA`,
-								paddingTop: 10,
-								paddingBottom: 10,
-								paddingLeft: 8,
-								paddingRight: 16,
-							}}
-						/>
-						<input
-							placeholder={"Email*"}
-							value={input2}
-							onChange={(event)=>onChangeInput2(event.target.value)}
-							style={{
-								color: "#A3AAC1",
-								fontSize: 18,
-								flex: 1,
-								alignSelf: "stretch",
-								background: "#FFFFFF",
-								borderRadius: 4,
-								border: `1px solid #E0E2EA`,
-								paddingTop: 10,
-								paddingBottom: 10,
-								paddingLeft: 8,
-								paddingRight: 16,
-							}}
-						/>
-					</div>
-					<div 
-						style={{
-							alignSelf: "stretch",
-							display: "flex",
-							alignItems: "flex-start",
-							marginBottom: 20,
-							marginLeft: 424,
-							marginRight: 424,
-							gap: 32,
-						}}>
-						<button 
-							style={{
-								flex: 1,
-								display: "flex",
-								justifyContent: "space-between",
-								alignItems: "center",
-								background: "#FFFFFF",
-								borderRadius: 4,
-								border: `1px solid #E0E2EA`,
-								paddingTop: 10,
-								paddingBottom: 10,
-								textAlign: "left",
-							}}
-							onClick={()=>alert("Pressed!")}>
-							<span 
-								style={{
-									color: "#A3AAC1",
-									fontSize: 18,
-									marginLeft: 8,
-								}} >
-								{"Reason for Contacting*"}
-							</span>
-							<img
-								src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/hdf8vma5_expires_30_days.png"} 
-								style={{
-									borderRadius: 4,
-									width: 20,
-									height: 20,
-									marginRight: 8,
-									objectFit: "fill",
-								}}
-							/>
-						</button>
-						<input
-							placeholder={"Phone"}
-							value={input3}
-							onChange={(event)=>onChangeInput3(event.target.value)}
-							style={{
-								color: "#A3AAC1",
-								fontSize: 18,
-								flex: 1,
-								alignSelf: "stretch",
-								background: "#FFFFFF",
-								borderRadius: 4,
-								border: `1px solid #E0E2EA`,
-								paddingTop: 10,
-								paddingBottom: 10,
-								paddingLeft: 8,
-								paddingRight: 16,
-							}}
-						/>
-					</div>
-					<div 
-						style={{
-							alignSelf: "stretch",
-							display: "flex",
-							flexDirection: "column",
-							alignItems: "flex-start",
-							background: "#FFFFFF",
-							borderRadius: 4,
-							border: `1px solid #E0E2EA`,
-							paddingTop: 10,
-							paddingBottom: 104,
-							marginBottom: 8,
-							marginLeft: 424,
-							marginRight: 424,
-						}}>
-						<span 
-							style={{
-								color: "#A3AAC1",
-								fontSize: 18,
-								marginLeft: 8,
-							}} >
-							{"Message"}
-						</span>
-					</div>
-					<span 
-						style={{
-							color: "#C40303",
-							fontSize: 16,
-							marginBottom: 28,
-							marginLeft: 424,
-						}} >
-						{"* indicates a required field"}
-					</span>
-					<div 
-						style={{
-							alignSelf: "stretch",
-							display: "flex",
-							flexDirection: "column",
-							alignItems: "center",
-						}}>
-						<button 
-							style={{
-								display: "flex",
-								flexDirection: "column",
-								alignItems: "flex-start",
-								background: "#2947A9",
-								borderRadius: 2,
-								border: "none",
-								paddingTop: 16,
-								paddingBottom: 16,
-								paddingLeft: 103,
-								paddingRight: 103,
-								textAlign: "left",
-							}}
-							onClick={()=>alert("Pressed!")}>
-							<span 
-								style={{
-									color: "#FFFFFF",
-									fontSize: 18,
-									fontWeight: "bold",
-								}} >
-								{"Submit"}
-							</span>
-						</button>
-					</div>
-				</div>
-				<div 
-					style={{
-						alignSelf: "stretch",
-						display: "flex",
-						flexDirection: "column",
-						alignItems: "flex-start",
-						background: "#FFFFFF",
-						paddingTop: 85,
-						paddingBottom: 41,
-					}}>
-					<div 
-						style={{
-							display: "flex",
-							alignItems: "flex-start",
-							marginBottom: 20,
-							marginLeft: 112,
-						}}>
-						<div 
-							style={{
-								flexShrink: 0,
-								display: "flex",
-								alignItems: "center",
-								paddingRight: 3,
-								marginRight: 502,
-								gap: 45,
-							}}>
-							<span 
-								style={{
-									color: "#2947A9",
-									fontSize: 20,
-									fontWeight: "bold",
-								}} >
-								{"Email:"}
-							</span>
-							<span 
-								style={{
-									color: "#000000",
-									fontSize: 20,
-								}} >
-								{"partner@bacorp.ca"}
-							</span>
-						</div>
-						<span 
-							style={{
-								color: "#2947A9",
-								fontSize: 20,
-								fontWeight: "bold",
-							}} >
-							{"Newsletter:"}
-						</span>
-					</div>
-					<div 
-						style={{
-							alignSelf: "stretch",
-							display: "flex",
-							alignItems: "flex-start",
-							marginBottom: 2,
-							marginLeft: 112,
-							marginRight: 112,
-						}}>
-						<span 
-							style={{
-								color: "#2947A9",
-								fontSize: 20,
-								fontWeight: "bold",
-								marginRight: 722,
-							}} >
-							{"Social:"}
-						</span>
-						<input
-							placeholder={"Your email here"}
-							value={input4}
-							onChange={(event)=>onChangeInput4(event.target.value)}
-							style={{
-								color: "#A3AAC1",
-								fontSize: 18,
-								marginRight: 8,
-								flexShrink: 0,
-								background: "#FFFFFF",
-								borderRadius: 4,
-								border: `1px solid #E0E2EA`,
-								paddingTop: 10,
-								paddingBottom: 10,
-								paddingLeft: 8,
-								paddingRight: 8,
-							}}
-						/>
-						<button 
-							style={{
-								flexShrink: 0,
-								display: "flex",
-								flexDirection: "column",
-								alignItems: "flex-start",
-								background: "#F9995D",
-								borderRadius: 4,
-								border: "none",
-								paddingTop: 10,
-								paddingBottom: 10,
-								paddingLeft: 23,
-								paddingRight: 23,
-								textAlign: "left",
-							}}
-							onClick={()=>alert("Pressed!")}>
-							<span 
-								style={{
-									color: "#FFFFFF",
-									fontSize: 18,
-									fontWeight: "bold",
-								}} >
-								{"Subscribe"}
-							</span>
-						</button>
-					</div>
-					<div 
-						style={{
-							display: "flex",
-							alignItems: "flex-start",
-							marginBottom: 44,
-							marginLeft: 112,
-							gap: 20,
-						}}>
-						<img
-							src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/ikawjif9_expires_30_days.png"} 
-							style={{
-								width: 40,
-								height: 40,
-								objectFit: "fill",
-							}}
-						/>
-						<img
-							src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/1xvwforg_expires_30_days.png"} 
-							style={{
-								width: 40,
-								height: 40,
-								objectFit: "fill",
-							}}
-						/>
-						<img
-							src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/n73prckk_expires_30_days.png"} 
-							style={{
-								width: 40,
-								height: 40,
-								objectFit: "fill",
-							}}
-						/>
-					</div>
+				<p className="text-[#282D3D] text-lg sm:text-xl max-w-4xl">
+				  Production capacity under 400,000 hectolitres/year<br /><br />
+				  Fully operational and brewing-ready facilities<br /><br />
+				  Ambition to grow with the support of strategic capital and industry expertise
+				</p>
+			  </div>
+			</section>
+	
+			{/* Our Process Section */}
+			<section className="bg-white px-6 sm:px-16 py-20">
+			  <div className="flex flex-col lg:flex-row gap-10">
+				<div className="flex flex-col gap-16">
+				  {/* Step 1 */}
+				  <div className="flex flex-col items-start bg-white rounded-md border border-white shadow-md p-8">
 					<img
-						src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/0fnswg0t_expires_30_days.png"} 
-						style={{
-							width: 123,
-							height: 81,
-							marginLeft: 113,
-							objectFit: "fill",
-						}}
+					  src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/g8djp9cf_expires_30_days.png"
+					  alt="Step 1 Icon"
+					  className="w-20 h-20 mb-4"
 					/>
+					<span className="text-[72px] font-bold text-[#282D3D] mb-4">01</span>
+					<div className="flex items-center gap-3">
+					  <div className="w-2 h-7 bg-[#F9995D]" />
+					  <span className="text-xl text-[#657199]">Initial Inquiry</span>
+					</div>
+				  </div>
+	
+				  {/* Step 3 */}
+				  <div className="flex flex-col items-start bg-white rounded-md border border-white shadow-md p-8 ml-12">
+					<img
+					  src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/r88nwg34_expires_30_days.png"
+					  alt="Step 3 Icon"
+					  className="w-20 h-20 mb-4"
+					/>
+					<span className="text-[72px] font-bold text-[#282D3D] mb-4">03</span>
+					<div className="flex items-start gap-3">
+					  <div className="w-2 h-14 bg-[#F9995D]" />
+					  <span className="text-xl text-[#657199] max-w-xs">
+						Due Diligence & Negotiations
+					  </span>
+					</div>
+				  </div>
 				</div>
-				<div 
-					style={{
-						alignSelf: "stretch",
-						display: "flex",
-						flexDirection: "column",
-						alignItems: "flex-start",
-						background: "#2947A9",
-						paddingTop: 26,
-						paddingBottom: 26,
-					}}>
-					<span 
-						style={{
-							color: "#FFFFFF",
-							fontSize: 16,
-							marginLeft: 112,
-						}} >
-						{"BAC © 2025. All Rights Reserved"}
-					</span>
+	
+				<div className="flex flex-col gap-16">
+				  {/* Step 2 */}
+				  <div className="flex flex-col items-start bg-white rounded-md border border-white shadow-md p-8">
+					<img
+					  src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/l5bo0mmf_expires_30_days.png"
+					  alt="Step 2 Icon"
+					  className="w-20 h-20 mb-4"
+					/>
+					<span className="text-[72px] font-bold text-[#282D3D] mb-4">02</span>
+					<div className="flex items-start gap-3">
+					  <div className="w-2 h-14 bg-[#F9995D]" />
+					  <span className="text-xl text-[#657199] max-w-xs">
+						Evaluation & LOI Issuance
+					  </span>
+					</div>
+				  </div>
+	
+				  {/* Step 4 */}
+				  <div className="flex flex-col items-start bg-white rounded-md border border-white shadow-md p-8">
+					<img
+					  src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/xto02uih_expires_30_days.png"
+					  alt="Step 4 Icon"
+					  className="w-20 h-20 mb-4"
+					/>
+					<span className="text-[72px] font-bold text-[#282D3D] mb-4">04</span>
+					<div className="flex items-start gap-3">
+					  <div className="w-2 h-14 bg-[#F9995D]" />
+					  <span className="text-xl text-[#657199] max-w-xs">
+						Final Agreement & Funding
+					  </span>
+					</div>
+				  </div>
 				</div>
-			</div>
+	
+				<div className="flex flex-col justify-center gap-6 mt-8 lg:mt-28">
+				  <h2 className="text-[#2947A9] text-[40px] sm:text-[60px] font-bold">
+					Our Process
+				  </h2>
+				  <p className="text-lg sm:text-xl max-w-md text-black">
+					Our streamlined acquisition process allows us to move quickly—from initial interest to funding in as little as 30 to 90 days post-LOI.
+				  </p>
+				  <button
+					onClick={() => alert("Pressed!")}
+					className="bg-[#2947A9] text-white text-lg font-bold px-10 py-4 rounded"
+				  >
+					Contact Us
+				  </button>
+				</div>
+			  </div>
+			</section>
+
+
+	  <section className="bg-[#F6F8F7] py-16 px-6 sm:px-32 flex flex-col items-center">
+          <h2 className="text-[#282D3D] text-[36px] font-bold text-center mb-6">
+            Interested in partnering or learning more?
+          </h2>
+          <p className="text-[#282D3D] text-lg text-center mb-10">
+            Please fill out the form below or contact us directly at <strong>partner@bacorp.ca</strong>
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-6 w-full max-w-4xl mb-6">
+            <input
+              type="text"
+              placeholder="Your Name*"
+              value={input1}
+              onChange={(e) => setInput1(e.target.value)}
+              className="flex-1 p-3 border border-gray-300 rounded-md text-base text-gray-700"
+            />
+            <input
+              type="email"
+              placeholder="Email*"
+              value={input2}
+              onChange={(e) => setInput2(e.target.value)}
+              className="flex-1 p-3 border border-gray-300 rounded-md text-base text-gray-700"
+            />
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-6 w-full max-w-4xl mb-6">
+            <select
+              className="flex-1 p-3 border border-gray-300 rounded-md text-base text-gray-500"
+              onChange={() => alert("Pressed!")}
+            >
+              <option>Reason for Contacting*</option>
+            </select>
+            <input
+              type="tel"
+              placeholder="Phone"
+              value={input3}
+              onChange={(e) => setInput3(e.target.value)}
+              className="flex-1 p-3 border border-gray-300 rounded-md text-base text-gray-700"
+            />
+          </div>
+
+          <textarea
+            placeholder="Message"
+            className="w-full max-w-4xl p-4 border border-gray-300 rounded-md text-base text-gray-700 mb-4 min-h-[150px]"
+          />
+
+          <p className="text-sm text-red-600 self-start max-w-4xl">
+            * indicates a required field
+          </p>
+
+          <button
+            onClick={() => alert("Pressed!")}
+            className="mt-4 bg-[#2947A9] text-white text-lg font-bold px-10 py-4 rounded"
+          >
+            Submit
+          </button>
+        </section>
+		<footer className="bg-[#2947A9] text-white py-8 px-6 sm:px-16">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+            <span className="text-base">BAC © 2025. All Rights Reserved</span>
+            <div className="flex gap-4 mt-4 sm:mt-0">
+              <img
+                src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/ikawjif9_expires_30_days.png"
+                alt="Facebook"
+                className="w-6 h-6 object-contain"
+              />
+              <img
+                src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/1xvwforg_expires_30_days.png"
+                alt="Twitter"
+                className="w-6 h-6 object-contain"
+              />
+              <img
+                src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/n73prckk_expires_30_days.png"
+                alt="Instagram"
+                className="w-6 h-6 object-contain"
+              />
+            </div>
+          </div>
+        </footer>
+		  </div>
 		</div>
-	)
-}
+	  );
+	};
+	
+
+	

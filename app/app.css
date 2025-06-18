@@ -13,3 +13,12 @@ body {
     color-scheme: dark;
   }
 }
+
+
+.clip-polygon {
+  justify-content: center;
+ margin-top: 10px;
+  clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+  
+  
+}

@@ -1,585 +1,119 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { NavBar } from "./navBar";
 
 export const About = () => {
+  const [input1, setInput1] = useState("");
+  const [input2, setInput2] = useState("");
+  const [input3, setInput3] = useState("");
+  const [input4, setInput4] = useState("");
 
-	const [input1, onChangeInput1] = useState('');
-	const [input2, onChangeInput2] = useState('');
-	const [input3, onChangeInput3] = useState('');
-	const [input4, onChangeInput4] = useState('');
-	return (
-		<div 
-			style={{
-				display: "flex",
-				flexDirection: "column",
-				background: "#FFFFFF",
-			}}>
-			<div 
-				style={{
-					height: 2719,
-					alignSelf: "stretch",
-					display: "flex",
-					flexDirection: "column",
-					background: "#FFFFFF",
-				}}>
-			<NavBar />
-				<img
-					src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/h8iycr9f_expires_30_days.png"} 
-					style={{
-						height: 426,
-						alignSelf: "stretch",
-						objectFit: "fill",
-					}}
-				/>
-				<div 
-					style={{
-						alignSelf: "stretch",
-						display: "flex",
-						flexDirection: "column",
-						alignItems: "flex-start",
-						background: "#FFFFFF",
-						paddingTop: 81,
-						paddingBottom: 81,
-						marginLeft: 1,
-						marginRight: 1,
-						position: "relative",
-					}}>
-					<img
-						src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/6zayarvt_expires_30_days.png"} 
-						style={{
-							width: 902,
-							height: 669,
-							marginLeft: 80,
-							objectFit: "fill",
-						}}
-					/>
-					<div 
-						style={{
-							position: "absolute",
-							bottom: 92,
-							right: 79,
-							width: 488,
-							display: "flex",
-							flexDirection: "column",
-							alignItems: "flex-start",
-							background: "#2947A9",
-							borderRadius: 2,
-							boxShadow: "0px 8px 8px #11182708",
-						}}>
-						<span 
-							style={{
-								color: "#FFFFFF",
-								fontSize: 24,
-								fontWeight: "bold",
-								marginTop: 70,
-								marginBottom: 6,
-								marginLeft: 40,
-							}} >
-							{"Purpose-Built Capital for Growth"}
-						</span>
-						<div 
-							style={{
-								height: 1,
-								alignSelf: "stretch",
-								background: "#FFFFFF",
-								marginBottom: 48,
-								marginLeft: 41,
-								marginRight: 41,
-							}}>
-						</div>
-						<span 
-							style={{
-								color: "#FFFFFF",
-								fontSize: 20,
-								marginBottom: 27,
-								marginLeft: 40,
-								marginRight: 40,
-							}} >
-							{"Brewery Acquisition Corp. (BAC) is focused exclusively on acquiring equity in Ontario-based craft breweries.\n\nOur team brings deep experience in capital deployment, operational scaling, and retail expansion—backed by over $200M raised and 50+ retail locations developed in the past year."}
-						</span>
-						<button 
-							style={{
-								display: "flex",
-								flexDirection: "column",
-								alignItems: "flex-start",
-								background: "#FFFFFF",
-								borderRadius: 6,
-								border: `2px solid #2947A9`,
-								paddingTop: 16,
-								paddingBottom: 16,
-								paddingLeft: 20,
-								paddingRight: 20,
-								marginBottom: 60,
-								marginLeft: 40,
-								textAlign: "left",
-							}}
-							onClick={()=>alert("Pressed!")}>
-							<span 
-								style={{
-									color: "#2947A9",
-									fontSize: 18,
-									fontWeight: "bold",
-								}} >
-								{"Contact Us"}
-							</span>
-						</button>
-					</div>
-				</div>
-				<div 
-					style={{
-						alignSelf: "stretch",
-						display: "flex",
-						alignItems: "center",
-						paddingTop: 100,
-						paddingBottom: 100,
-						paddingLeft: 112,
-						paddingRight: 112,
-						marginLeft: 1,
-						marginRight: 1,
-						gap: 12,
-						backgroundImage: 'url(https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/2ln7v4fd_expires_30_days.png)',
-						backgroundSize: "cover",
-						backgroundPosition: "center",
-					}}>
-					<div 
-						style={{
-							flex: 1,
-							display: "flex",
-							flexDirection: "column",
-							alignItems: "flex-start",
-							gap: 30,
-						}}>
-						<span 
-							style={{
-								color: "#FFFFFF",
-								fontSize: 36,
-								fontWeight: "bold",
-							}} >
-							{"Free consultation with exceptional quality"}
-						</span>
-						<span 
-							style={{
-								color: "#FFFFFF",
-								fontSize: 24,
-							}} >
-							{"Just one email away: partner@bacorp.ca"}
-						</span>
-					</div>
-					<button 
-						style={{
-							flexShrink: 0,
-							display: "flex",
-							flexDirection: "column",
-							alignItems: "flex-start",
-							background: "none",
-							borderRadius: 2,
-							border: `2px solid #FFFFFF`,
-							paddingTop: 16,
-							paddingBottom: 16,
-							paddingLeft: 20,
-							paddingRight: 20,
-							textAlign: "left",
-						}}
-						onClick={()=>alert("Pressed!")}>
-						<span 
-							style={{
-								color: "#FFFFFF",
-								fontSize: 18,
-								fontWeight: "bold",
-							}} >
-							{"Get your consultation"}
-						</span>
-					</button>
-				</div>
-				<div 
-					style={{
-						alignSelf: "stretch",
-						display: "flex",
-						flexDirection: "column",
-						alignItems: "flex-start",
-						background: "#F6F8F7",
-						paddingTop: 60,
-						paddingBottom: 60,
-						marginLeft: 1,
-						marginRight: 1,
-					}}>
-					<span 
-						style={{
-							color: "#282D3D",
-							fontSize: 36,
-							fontWeight: "bold",
-							marginBottom: 20,
-							marginLeft: 347,
-							marginRight: 347,
-						}} >
-						{"Interested in partnering or learning more?"}
-					</span>
-					<span 
-						style={{
-							color: "#282D3D",
-							fontSize: 20,
-							textAlign: "center",
-							marginBottom: 38,
-							marginLeft: 451,
-							marginRight: 451,
-						}} >
-						{"Please fill out the form below or contact us directly at partner@bacorp.ca"}
-					</span>
-					<div 
-						style={{
-							alignSelf: "stretch",
-							display: "flex",
-							alignItems: "flex-start",
-							marginBottom: 20,
-							marginLeft: 424,
-							marginRight: 424,
-							gap: 32,
-						}}>
-						<input
-							placeholder={"Your Name*"}
-							value={input1}
-							onChange={(event)=>onChangeInput1(event.target.value)}
-							style={{
-								color: "#A3AAC1",
-								fontSize: 18,
-								flex: 1,
-								alignSelf: "stretch",
-								background: "#FFFFFF",
-								borderRadius: 4,
-								border: `1px solid #E0E2EA`,
-								paddingTop: 10,
-								paddingBottom: 10,
-								paddingLeft: 8,
-								paddingRight: 16,
-							}}
-						/>
-						<input
-							placeholder={"Email*"}
-							value={input2}
-							onChange={(event)=>onChangeInput2(event.target.value)}
-							style={{
-								color: "#A3AAC1",
-								fontSize: 18,
-								flex: 1,
-								alignSelf: "stretch",
-								background: "#FFFFFF",
-								borderRadius: 4,
-								border: `1px solid #E0E2EA`,
-								paddingTop: 10,
-								paddingBottom: 10,
-								paddingLeft: 8,
-								paddingRight: 16,
-							}}
-						/>
-					</div>
-					<div 
-						style={{
-							alignSelf: "stretch",
-							display: "flex",
-							alignItems: "flex-start",
-							marginBottom: 20,
-							marginLeft: 424,
-							marginRight: 424,
-							gap: 32,
-						}}>
-						<button 
-							style={{
-								flex: 1,
-								display: "flex",
-								justifyContent: "space-between",
-								alignItems: "center",
-								background: "#FFFFFF",
-								borderRadius: 4,
-								border: `1px solid #E0E2EA`,
-								paddingTop: 10,
-								paddingBottom: 10,
-								textAlign: "left",
-							}}
-							onClick={()=>alert("Pressed!")}>
-							<span 
-								style={{
-									color: "#A3AAC1",
-									fontSize: 18,
-									marginLeft: 8,
-								}} >
-								{"Reason for Contacting*"}
-							</span>
-							<img
-								src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/aeug037e_expires_30_days.png"} 
-								style={{
-									borderRadius: 4,
-									width: 20,
-									height: 20,
-									marginRight: 8,
-									objectFit: "fill",
-								}}
-							/>
-						</button>
-						<input
-							placeholder={"Phone"}
-							value={input3}
-							onChange={(event)=>onChangeInput3(event.target.value)}
-							style={{
-								color: "#A3AAC1",
-								fontSize: 18,
-								flex: 1,
-								alignSelf: "stretch",
-								background: "#FFFFFF",
-								borderRadius: 4,
-								border: `1px solid #E0E2EA`,
-								paddingTop: 10,
-								paddingBottom: 10,
-								paddingLeft: 8,
-								paddingRight: 16,
-							}}
-						/>
-					</div>
-					<div 
-						style={{
-							alignSelf: "stretch",
-							display: "flex",
-							flexDirection: "column",
-							alignItems: "flex-start",
-							background: "#FFFFFF",
-							borderRadius: 4,
-							border: `1px solid #E0E2EA`,
-							paddingTop: 10,
-							paddingBottom: 104,
-							marginBottom: 8,
-							marginLeft: 424,
-							marginRight: 424,
-						}}>
-						<span 
-							style={{
-								color: "#A3AAC1",
-								fontSize: 18,
-								marginLeft: 8,
-							}} >
-							{"Message"}
-						</span>
-					</div>
-					<span 
-						style={{
-							color: "#C40303",
-							fontSize: 16,
-							marginBottom: 28,
-							marginLeft: 424,
-						}} >
-						{"* indicates a required field"}
-					</span>
-					<div 
-						style={{
-							alignSelf: "stretch",
-							display: "flex",
-							flexDirection: "column",
-							alignItems: "center",
-						}}>
-						<button 
-							style={{
-								display: "flex",
-								flexDirection: "column",
-								alignItems: "flex-start",
-								background: "#2947A9",
-								borderRadius: 2,
-								border: "none",
-								paddingTop: 16,
-								paddingBottom: 16,
-								paddingLeft: 103,
-								paddingRight: 103,
-								textAlign: "left",
-							}}
-							onClick={()=>alert("Pressed!")}>
-							<span 
-								style={{
-									color: "#FFFFFF",
-									fontSize: 18,
-									fontWeight: "bold",
-								}} >
-								{"Submit"}
-							</span>
-						</button>
-					</div>
-				</div>
-				<div 
-					style={{
-						alignSelf: "stretch",
-						display: "flex",
-						flexDirection: "column",
-						alignItems: "flex-start",
-						background: "#FFFFFF",
-						paddingTop: 85,
-						paddingBottom: 41,
-						marginLeft: 1,
-						marginRight: 1,
-					}}>
-					<div 
-						style={{
-							display: "flex",
-							alignItems: "flex-start",
-							marginBottom: 20,
-							marginLeft: 112,
-						}}>
-						<div 
-							style={{
-								flexShrink: 0,
-								display: "flex",
-								alignItems: "center",
-								paddingRight: 3,
-								marginRight: 502,
-								gap: 45,
-							}}>
-							<span 
-								style={{
-									color: "#2947A9",
-									fontSize: 20,
-									fontWeight: "bold",
-								}} >
-								{"Email:"}
-							</span>
-							<span 
-								style={{
-									color: "#000000",
-									fontSize: 20,
-								}} >
-								{"partner@bacorp.ca"}
-							</span>
-						</div>
-						<span 
-							style={{
-								color: "#2947A9",
-								fontSize: 20,
-								fontWeight: "bold",
-							}} >
-							{"Newsletter:"}
-						</span>
-					</div>
-					<div 
-						style={{
-							alignSelf: "stretch",
-							display: "flex",
-							alignItems: "flex-start",
-							marginBottom: 2,
-							marginLeft: 112,
-							marginRight: 112,
-						}}>
-						<span 
-							style={{
-								color: "#2947A9",
-								fontSize: 20,
-								fontWeight: "bold",
-								marginRight: 722,
-							}} >
-							{"Social:"}
-						</span>
-						<input
-							placeholder={"Your email here"}
-							value={input4}
-							onChange={(event)=>onChangeInput4(event.target.value)}
-							style={{
-								color: "#A3AAC1",
-								fontSize: 18,
-								marginRight: 8,
-								flexShrink: 0,
-								background: "#FFFFFF",
-								borderRadius: 4,
-								border: `1px solid #E0E2EA`,
-								paddingTop: 10,
-								paddingBottom: 10,
-								paddingLeft: 8,
-								paddingRight: 8,
-							}}
-						/>
-						<button 
-							style={{
-								flexShrink: 0,
-								display: "flex",
-								flexDirection: "column",
-								alignItems: "flex-start",
-								background: "#F9995D",
-								borderRadius: 4,
-								border: "none",
-								paddingTop: 10,
-								paddingBottom: 10,
-								paddingLeft: 23,
-								paddingRight: 23,
-								textAlign: "left",
-							}}
-							onClick={()=>alert("Pressed!")}>
-							<span 
-								style={{
-									color: "#FFFFFF",
-									fontSize: 18,
-									fontWeight: "bold",
-								}} >
-								{"Subscribe"}
-							</span>
-						</button>
-					</div>
-					<div 
-						style={{
-							display: "flex",
-							alignItems: "flex-start",
-							marginBottom: 44,
-							marginLeft: 112,
-							gap: 20,
-						}}>
-						<img
-							src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/hkrdrhd4_expires_30_days.png"} 
-							style={{
-								width: 40,
-								height: 40,
-								objectFit: "fill",
-							}}
-						/>
-						<img
-							src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/mweiwljf_expires_30_days.png"} 
-							style={{
-								width: 40,
-								height: 40,
-								objectFit: "fill",
-							}}
-						/>
-						<img
-							src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/ckekvds6_expires_30_days.png"} 
-							style={{
-								width: 40,
-								height: 40,
-								objectFit: "fill",
-							}}
-						/>
-					</div>
-					<img
-						src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/e95s07tz_expires_30_days.png"} 
-						style={{
-							width: 123,
-							height: 81,
-							marginLeft: 113,
-							objectFit: "fill",
-						}}
-					/>
-				</div>
-				<div 
-					style={{
-						alignSelf: "stretch",
-						display: "flex",
-						flexDirection: "column",
-						alignItems: "flex-start",
-						background: "#2947A9",
-						paddingTop: 26,
-						paddingBottom: 26,
-						marginLeft: 1,
-						marginRight: 1,
-					}}>
-					<span 
-						style={{
-							color: "#FFFFFF",
-							fontSize: 16,
-							marginLeft: 112,
-						}} >
-						{"BAC © 2025. All Rights Reserved"}
-					</span>
-				</div>
-			</div>
-		</div>
-	)
-}
+  return (
+    <div className="flex flex-col bg-white">
+      <NavBar />
+
+      {/* Hero Image */}
+      <img
+        src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/h8iycr9f_expires_30_days.png"
+        alt="About Hero"
+        className="w-full h-[426px] object-cover"
+      />
+
+      {/* Overlay Card Section */}
+      <div className="relative flex flex-col lg:flex-row items-center justify-center px-4 py-20">
+        <img
+          src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/6zayarvt_expires_30_days.png"
+          alt="Team"
+          className="w-full max-w-4xl h-auto object-cover"
+        />
+        <div className="absolute bottom-10 right-10 bg-[#2947A9] text-white p-8 rounded shadow-md max-w-sm">
+          <h2 className="text-xl font-bold mb-4">Purpose-Built Capital for Growth</h2>
+          <hr className="border-white mb-6" />
+          <p className="mb-6 text-sm">
+            Brewery Acquisition Corp. (BAC) is focused exclusively on acquiring equity in Ontario-based craft breweries.
+            Our team brings deep experience in capital deployment, operational scaling, and retail expansion—backed by over $200M raised and 50+ retail locations developed in the past year.
+          </p>
+          <button className="bg-white text-[#2947A9] font-bold px-6 py-2 rounded border-2 border-[#2947A9] hover:bg-gray-100">
+            Contact Us
+          </button>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div
+        className="flex flex-col md:flex-row justify-between items-center bg-cover bg-center text-white px-6 md:px-28 py-24"
+        style={{ backgroundImage: 'url(https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/2ln7v4fd_expires_30_days.png)' }}
+      >
+        <div className="mb-6 md:mb-0">
+          <h3 className="text-2xl font-bold mb-2">Free consultation with exceptional quality</h3>
+          <p className="text-lg">Just one email away: partner@bacorp.ca</p>
+        </div>
+        <button className="text-white border-2 border-white px-6 py-3 rounded hover:bg-white hover:text-[#2947A9] transition">
+          Get your consultation
+        </button>
+      </div>
+
+      {/* Contact Form */}
+      <div className="bg-[#F6F8F7] px-6 sm:px-24 py-16">
+        <h2 className="text-2xl sm:text-3xl text-[#282D3D] font-bold text-center mb-4">
+          Interested in partnering or learning more?
+        </h2>
+        <p className="text-center text-[#282D3D] mb-10">
+          Please fill out the form below or contact us directly at partner@bacorp.ca
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto mb-6">
+          <input type="text" placeholder="Your Name*" value={input1} onChange={(e) => setInput1(e.target.value)}
+            className="p-3 border border-gray-300 rounded bg-white placeholder-gray-400 text-base" />
+          <input type="email" placeholder="Email*" value={input2} onChange={(e) => setInput2(e.target.value)}
+            className="p-3 border border-gray-300 rounded bg-white placeholder-gray-400 text-base" />
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto mb-6">
+          <select className="p-3 border border-gray-300 rounded bg-white text-base text-gray-500">
+            <option>Reason for Contacting*</option>
+          </select>
+          <input type="text" placeholder="Phone" value={input3} onChange={(e) => setInput3(e.target.value)}
+            className="p-3 border border-gray-300 rounded bg-white placeholder-gray-400 text-base" />
+        </div>
+        <textarea placeholder="Message" rows={5}
+          className="w-full max-w-4xl mx-auto block p-3 border border-gray-300 rounded bg-white text-base placeholder-gray-400 mb-3"></textarea>
+        <p className="text-sm text-[#C40303] mb-6 pl-4">* indicates a required field</p>
+        <div className="text-center">
+          <button className="bg-[#2947A9] text-white font-bold px-10 py-3 rounded">Submit</button>
+        </div>
+      </div>
+
+      {/* Footer Section */}
+      <footer className="bg-white px-6 sm:px-24 py-10">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-6">
+          <div>
+            <h4 className="text-[#2947A9] font-bold">Email:</h4>
+            <p className="text-black">partner@bacorp.ca</p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 items-start">
+            <h4 className="text-[#2947A9] font-bold">Newsletter:</h4>
+            <div className="flex gap-2">
+              <input type="email" placeholder="Your email here" value={input4} onChange={(e) => setInput4(e.target.value)}
+                className="p-2 border border-gray-300 rounded text-base" />
+              <button className="bg-[#F9995D] text-white font-bold px-4 py-2 rounded">Subscribe</button>
+            </div>
+          </div>
+          <div>
+            <h4 className="text-[#2947A9] font-bold mb-2">Social:</h4>
+            <div className="flex gap-4">
+              <img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/hkrdrhd4_expires_30_days.png" alt="FB" className="w-8 h-8" />
+              <img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/mweiwljf_expires_30_days.png" alt="IG" className="w-8 h-8" />
+              <img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/ckekvds6_expires_30_days.png" alt="X" className="w-8 h-8" />
+            </div>
+          </div>
+        </div>
+        <img
+          src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/e95s07tz_expires_30_days.png"
+          alt="Logo"
+          className="w-28 h-auto mt-10"
+        />
+        <p className="text-sm text-white bg-[#2947A9] text-center py-4 mt-6">
+          BAC © 2025. All Rights Reserved
+        </p>
+      </footer>
+    </div>
+  );
+};
