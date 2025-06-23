@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { NavBar } from "./navBar";
 import Footer from "./Footer";
-import Bac from '../mnt/data/image.png'
+import Bac from '../mnt/data/image_4.png'
 import { ContactForm } from "./contactusform";
+import ConsultationSection from "./consaltation";
 
 
 export const About = () => {
@@ -61,15 +62,7 @@ export const About = () => {
 
 
       {/* CTA Section */}
-      <div className="flex flex-col md:flex-row justify-between items-center bg-cover bg-center text-white px-6 md:px-28 py-24" style={{ backgroundImage: 'url(https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hJXeSpXRqz/2ln7v4fd_expires_30_days.png)' }}>
-        <div className="mb-6 md:mb-0 text-center md:text-left">
-          <h3 className="text-2xl font-bold mb-2">Free consultation with exceptional quality</h3>
-          <p className="text-lg">Just one email away: partner@bacorp.ca</p>
-        </div>
-        <button className="text-white border-2 border-white px-6 py-3 rounded hover:bg-white hover:text-[#2947A9] transition">
-          Get your consultation
-        </button>
-      </div>
+      <ConsultationSection ></ConsultationSection>
 
       {/* Contact Form */}
       <ContactForm />

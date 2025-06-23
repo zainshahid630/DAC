@@ -3,6 +3,7 @@ import { NavBar } from "./navBar";
 import Footer from "./Footer";
 import Bac from '../mnt/data/image_3.png'
 import { ContactForm } from "./contactusform";
+import ConsultationSection from "./consaltation";
 export const Services = () => {
   const [input1, setInput1] = useState("");
   const [input2, setInput2] = useState("");
@@ -74,7 +75,7 @@ export const Services = () => {
             </div>
           </div>
         </div>
-
+        <ConsultationSection ></ConsultationSection>
         {/* Part 4: Form & Newsletter */}
         <ContactForm />
 

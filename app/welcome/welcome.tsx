@@ -6,6 +6,7 @@ import Bac from '../mnt/data/bac.png'
 import { OurProcess } from "./OurProcess";
 import Footer from "./Footer";
 import { ContactForm } from "./contactusform";
+import ConsultationSection from "./consaltation";
 
 export const Welcome = () => {// Part 1–3: Hero + "What We Offer" + Acquisition Criteria + Our Process Section (Tailwind Responsive)
 	const [input1, setInput1] = useState("");
@@ -141,9 +142,11 @@ export const Welcome = () => {// Part 1–3: Hero + "What We Offer" + Acquisitio
 	
 			{/* Our Process Section */}
 			<OurProcess />
-
+      <ConsultationSection ></ConsultationSection>
 
       <ContactForm />
+
+
 	<Footer input4={change4} onChangeInput4={onChangeInput4} />
 		  </div>
 		</div>
