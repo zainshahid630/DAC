@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { NavBar } from "./navBar";
 import Footer from "./Footer";
 import Bac from '../mnt/data/image.png'
+import { ContactForm } from "./contactusform";
+
 
 export const About = () => {
   const [input1, setInput1] = useState("");
@@ -70,29 +72,7 @@ export const About = () => {
       </div>
 
       {/* Contact Form */}
-      <div className="bg-[#F6F8F7] px-6 sm:px-10 md:px-24 py-16">
-        <h2 className="text-2xl sm:text-3xl text-[#282D3D] font-bold text-center mb-4">
-          Interested in partnering or learning more?
-        </h2>
-        <p className="text-center text-[#282D3D] mb-10">
-          Please fill out the form below or contact us directly at partner@bacorp.ca
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto mb-6">
-          <input type="text" placeholder="Your Name*" value={input1} onChange={(e) => setInput1(e.target.value)} className="p-3 border border-gray-300 rounded bg-white placeholder-gray-400 text-base w-full" />
-          <input type="email" placeholder="Email*" value={input2} onChange={(e) => setInput2(e.target.value)} className="p-3 border border-gray-300 rounded bg-white placeholder-gray-400 text-base w-full" />
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto mb-6">
-          <select className="p-3 border border-gray-300 rounded bg-white text-base text-gray-500 w-full">
-            <option>Reason for Contacting*</option>
-          </select>
-          <input type="text" placeholder="Phone" value={input3} onChange={(e) => setInput3(e.target.value)} className="p-3 border border-gray-300 rounded bg-white placeholder-gray-400 text-base w-full" />
-        </div>
-        <textarea placeholder="Message" rows={5} className="w-full max-w-4xl mx-auto block p-3 border border-gray-300 rounded bg-white text-base placeholder-gray-400 mb-3"></textarea>
-        {/* <p className="text-sm text-[#C40303] mb-6 pl-4">* indicates a required field</p> */}
-        <div className="text-center">
-          <button className="bg-[#2947A9] text-white font-bold px-10 py-3 rounded">Submit</button>
-        </div>
-      </div>
+      <ContactForm />
 
       {/* Footer Section */}
       <Footer input4={change4} onChangeInput4={onChangeInput5} />

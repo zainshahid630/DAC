@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavBar } from "./navBar";
 import Footer from "./Footer";
 import Bac from '../mnt/data/image_4.png'
+import { ContactForm } from "./contactusform";
 export const ContactUs = () => {
   const [input1, onChangeInput1] = useState("");
   const [input2, onChangeInput2] = useState("");
@@ -22,54 +23,9 @@ export const ContactUs = () => {
 </div>
 
       {/* Contact Form Section */}
-      <section className="w-full bg-[#F6F8F7] px-4 sm:px-8 lg:px-60 py-16 text-center">
-        <h2 className="text-2xl sm:text-3xl font-bold text-[#282D3D] mb-5">
-          Interested in partnering or learning more?
-        </h2>
-        <p className="text-sm sm:text-base md:text-lg text-[#282D3D] mb-10">
-          Please fill out the form below or contact us directly at partner@bacorp.ca
-        </p>
+    
+    <ContactForm />
 
-        <div className="flex flex-col lg:flex-row gap-6 mb-6">
-          <input
-            placeholder="Your Name*"
-            value={input1}
-            onChange={(e) => onChangeInput1(e.target.value)}
-            className="flex-1 p-3 border border-[#E0E2EA] rounded-md text-sm text-[#282D3D]"
-          />
-          <input
-            placeholder="Email*"
-            value={input2}
-            onChange={(e) => onChangeInput2(e.target.value)}
-            className="flex-1 p-3 border border-[#E0E2EA] rounded-md text-sm text-[#282D3D]"
-          />
-        </div>
-
-        <div className="flex flex-col lg:flex-row gap-6 mb-6">
-          <select
-            className="flex-1 p-3 border border-[#E0E2EA] rounded-md text-sm text-gray-500"
-          >
-            <option>Reason for Contacting*</option>
-          </select>
-          <input
-            placeholder="Phone"
-            value={input3}
-            onChange={(e) => onChangeInput3(e.target.value)}
-            className="flex-1 p-3 border border-[#E0E2EA] rounded-md text-sm text-[#282D3D]"
-          />
-        </div>
-
-        <textarea
-          placeholder="Message"
-          className="w-full h-32 p-3 border border-[#E0E2EA] rounded-md text-sm text-[#282D3D] mb-2"
-        />
-
-        {/* <p className="text-sm text-red-600 mb-6">* indicates a required field</p> */}
-
-        <button className="bg-[#2947A9] text-white font-bold px-10 sm:px-16 py-3 sm:py-4 rounded-md">
-          Submit
-        </button>
-      </section>
 
       {/* CTA Section */}
       <section

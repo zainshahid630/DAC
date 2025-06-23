@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavBar } from "./navBar";
 import Footer from "./Footer";
 import Bac from '../mnt/data/image_3.png'
+import { ContactForm } from "./contactusform";
 export const Services = () => {
   const [input1, setInput1] = useState("");
   const [input2, setInput2] = useState("");
@@ -75,54 +76,7 @@ export const Services = () => {
         </div>
 
         {/* Part 4: Form & Newsletter */}
-        <div className="w-full bg-[#F6F8F7] py-16 px-4 md:px-24">
-          <h2 className="text-[#282D3D] text-2xl md:text-3xl font-bold text-center mb-6">
-            Interested in partnering or learning more?
-          </h2>
-          <p className="text-[#282D3D] text-center text-sm md:text-base mb-10">
-            Please fill out the form below or contact us directly at partner@bacorp.ca
-          </p>
-
-          <div className="flex flex-col md:flex-row gap-4 mb-5">
-            <input
-              className="w-full md:w-1/2 p-3 border border-gray-300 rounded text-sm"
-              placeholder="Your Name*"
-              value={input1}
-              onChange={(e) => setInput1(e.target.value)}
-            />
-            <input
-              className="w-full md:w-1/2 p-3 border border-gray-300 rounded text-sm"
-              placeholder="Email*"
-              value={input2}
-              onChange={(e) => setInput2(e.target.value)}
-            />
-          </div>
-
-          <div className="flex flex-col md:flex-row gap-4 mb-5">
-            <select className="w-full md:w-1/2 p-3 border border-gray-300 rounded text-sm text-gray-500">
-              <option>Reason for Contacting*</option>
-            </select>
-            <input
-              className="w-full md:w-1/2 p-3 border border-gray-300 rounded text-sm"
-              placeholder="Phone"
-              value={input3}
-              onChange={(e) => setInput3(e.target.value)}
-            />
-          </div>
-
-          <textarea
-            className="w-full p-3 border border-gray-300 rounded text-sm h-40 mb-2"
-            placeholder="Message"
-          ></textarea>
-
-          {/* <p className="text-red-600 text-sm mb-6">* indicates a required field</p> */}
-
-          <div className="flex justify-center">
-            <button className="bg-[#2947A9] text-white font-bold py-3 px-12 rounded">
-              Submit
-            </button>
-          </div>
-        </div>
+        <ContactForm />
 
 
       </div>

@@ -5,6 +5,7 @@ import { NavBar } from "./navBar";
 import Bac from '../mnt/data/bac.png'
 import { OurProcess } from "./OurProcess";
 import Footer from "./Footer";
+import { ContactForm } from "./contactusform";
 
 export const Welcome = () => {// Part 1–3: Hero + "What We Offer" + Acquisition Criteria + Our Process Section (Tailwind Responsive)
 	const [input1, setInput1] = useState("");
@@ -90,7 +91,7 @@ export const Welcome = () => {// Part 1–3: Hero + "What We Offer" + Acquisitio
 
 	
 			{/* Acquisition Criteria Section */}
-			<section className="bg-[#efefef] flex flex-col items-start px-6 sm:px-16 pt-16 pb-32">
+			<section className="bg-[#efefef] flex flex-col   items-start px-6 sm:px-16 pt-16 pb-32">
   <h2 className="text-[#2947A9] text-[40px] sm:text-[60px] font-bold mb-6">
     Acquisition Criteria
   </h2>
@@ -99,8 +100,10 @@ export const Welcome = () => {// Part 1–3: Hero + "What We Offer" + Acquisitio
     We’re currently seeking Ontario-based craft breweries that meet the following profile:
   </p>
 
-  <div className="flex flex-col sm:flex-row gap-6 items-start">
-    <div className="flex flex-col gap-10 text-[#282D3D] text-lg sm:text-xl max-w-4xl">
+  <div className="flex items-center justify-center  self-center bg-[#efefef] px-4">
+  <div className="flex flex-col sm:flex-row gap-6 items-start justify-center text-[#282D3D] text-lg sm:text-xl max-w-4xl">
+    
+    <div className="flex flex-col gap-10">
       
       <div className="flex items-start gap-4">
         <img
@@ -131,6 +134,8 @@ export const Welcome = () => {// Part 1–3: Hero + "What We Offer" + Acquisitio
 
     </div>
   </div>
+</div>
+
 </section>
 
 	
@@ -138,59 +143,7 @@ export const Welcome = () => {// Part 1–3: Hero + "What We Offer" + Acquisitio
 			<OurProcess />
 
 
-	  <section className="bg-[#F6F8F7] py-16 px-6 sm:px-32 flex flex-col items-center">
-          <h2 className="text-[#282D3D] text-[36px] font-bold text-center mb-6">
-            Interested in partnering or learning more?
-          </h2>
-          <p className="text-[#282D3D] text-lg text-center mb-10">
-            Please fill out the form below or contact us directly at <strong>partner@bacorp.ca</strong>
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-6 w-full max-w-4xl mb-6">
-            <input
-              type="text"
-              placeholder="Your Name*"
-              value={input1}
-              onChange={(e) => setInput1(e.target.value)}
-              className="flex-1 p-3 border border-gray-300 rounded-md text-base text-gray-700"
-            />
-            <input
-              type="email"
-              placeholder="Email*"
-              value={input2}
-              onChange={(e) => setInput2(e.target.value)}
-              className="flex-1 p-3 border border-gray-300 rounded-md text-base text-gray-700"
-            />
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-6 w-full max-w-4xl mb-6">
-            <select
-              className="flex-1 p-3 border border-gray-300 rounded-md text-base text-gray-500"
-     
-            >
-              <option>Reason for Contacting*</option>
-            </select>
-            <input
-              type="tel"
-              placeholder="Phone"
-              value={input3}
-              onChange={(e) => setInput3(e.target.value)}
-              className="flex-1 p-3 border border-gray-300 rounded-md text-base text-gray-700"
-            />
-          </div>
-
-          <textarea
-            placeholder="Message"
-            className="w-full max-w-4xl p-4 border border-gray-300 rounded-md text-base text-gray-700 mb-4 min-h-[150px]"
-          />
-
-          <button
-
-            className="mt-4 bg-[#2947A9] text-white text-lg font-bold px-10 py-4 rounded"
-          >
-            Submit
-          </button>
-        </section>
+      <ContactForm />
 	<Footer input4={change4} onChangeInput4={onChangeInput4} />
 		  </div>
 		</div>
